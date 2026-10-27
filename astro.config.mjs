@@ -12,7 +12,7 @@ export default defineConfig({
 			description: 'How to use Cobalt Pear, the prompt page for your own image generation endpoint.',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/cobaltpear' }],
 			sidebar: [
-				{ label: 'Using Cobalt Pear', items: [{ label: 'LoRAs', slug: 'loras' }] },
+				{ label: 'Using Cobalt Pear', items: [{ label: 'Choosing a model', slug: 'models' }, { label: 'LoRAs', slug: 'loras' }] },
 			],
 		}),
 	],
