@@ -6,7 +6,7 @@ description: How to use Cobalt Pear, the prompt page for your own image generati
 **Prompt in, picture out — on your own RunPod.**
 Cobalt Pear is an API UI — a one-page app for RunPod Serverless. Pick a model, paste your endpoint ID, and just type.
 
-- Just type — no GPU, no ComfyUI, no install.
+- Just type — no GPU of your own, no ComfyUI, no install.
 - Your own RunPod: your own GPU, your own rules — you pay only for the pictures you make.
 - Your key and pictures stay in your browser. Only *Make it for me*, if you tick it, passes your key through our small relay, which keeps nothing.
 
