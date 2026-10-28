@@ -52,6 +52,8 @@ Paste into **Your own worker**:
 
 Or choose a pack or ComfyUI workflow `.json` file.
 
+The workers and the services each runs on: [Workers](../workers/).
+
 Then follow [Set up](../setup/) to make the endpoint. Made your own worker? [Make a pack](../make-a-pack/) for it.
 
 ## Setting up your copy

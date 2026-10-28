@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "node scripts/models.mjs cobaltpear src/content/docs/workers.md \"Workers\" \"The worker repos — which model family, how big a GPU, and which services each one runs on.\"",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
