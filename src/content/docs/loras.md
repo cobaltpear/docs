@@ -43,6 +43,8 @@ RunPod stops a build that runs over 30 minutes.
 
 The worker downloads the LoRA before the picture, and again each time it starts after being idle.
 
+If Civitai won't hand a LoRA over, a **Civitai token** box shows in **Models** — paste a token there (Civitai → your picture → **Account settings** → **Security & Apps** → **API Keys** → **Add API key** → **Read Only**).
+
 ### More than 4 at once
 
 By default one picture takes up to 4 linked LoRAs. To allow 8:

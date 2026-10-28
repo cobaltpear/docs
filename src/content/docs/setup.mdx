@@ -1,0 +1,107 @@
+---
+title: Set up your own image generator
+description: Make the accounts, copy a worker, create the RunPod endpoint and connect Cobalt Pear — about 15 minutes of clicking, no coding.
+---
+import Ticks from '../../components/Ticks.astro';
+
+<Ticks />
+
+About 15 minutes of clicking, then about 30 minutes of waiting. No coding.
+You need a card to add $10 of RunPod credit — you pay only while pictures are being made, nothing while it sits idle.
+
+Tick each step as you go — this page remembers where you are.
+
+## Make three accounts
+
+- [GitHub](https://github.com/signup) — holds your copy of the generator.
+- [Civitai](https://civitai.com) — where most models come from. Needed if the worker's page asks for a Civitai token.
+- [RunPod](https://runpod.io?ref=qpguwapm) — the computer that makes the pictures. Then **Billing** → add **$10**.
+
+  This is a referral link: after your first $10, RunPod gives you a bonus credit (usually $5–10) and Cobalt Pear a small credit.
+
+## Copy the worker
+
+A «worker» is the model packed for RunPod. Each model has its own worker page on GitHub — its page links here.
+
+1. On the worker's GitHub page, click the green **Use this template** → **Create a new repository**.
+2. Any name is fine. Choose **Private** → **Create repository**.
+
+Keep the worker's own page address — you paste it into Cobalt Pear in the last step (not the address of your copy).
+
+No worker yet? Start with a model from the app's **Models** list (like Z-Image Turbo) — it needs no GitHub at all: skip to the quick start below, then make the API key.
+
+## Quick start: a model from the list, without GitHub
+
+1. [Open Cobalt Pear](https://cobaltpear.github.io/) → **Models** → **Add** next to the model. The RunPod steps show in the same window.
+2. Do those steps on RunPod — for Z-Image Turbo: **Serverless** → **New Endpoint** → **Deploy image or video API** → **Text To Image** → **Tongyi-MAI/Z-Image-Turbo** → **Deploy with vLLM Omni** → **Next** → **Create Endpoint**.
+3. In the endpoint's settings set Max workers `1`, Execution timeout `600` → **Save**.
+4. Paste its endpoint ID next to the model in Cobalt Pear. Then [make an API key](#make-an-api-key) and put it in **Settings**.
+
+No build to wait for. The first picture takes about a minute while RunPod starts it; then about 8 seconds each.
+
+## Put your Civitai token in your copy
+
+Only if the worker's page asks for it. It lets RunPod download the model with your account.
+
+1. Civitai → your picture (top right) → **Account settings** → **Security & Apps** → **API Keys** → **Add API key** → Permission preset **Read Only** → copy it and keep it somewhere — Civitai shows it only once. One token works for every model: next time, reuse it.
+2. In your copy on GitHub, click `Dockerfile` → the pencil ✏️ (top right of the file).
+3. Replace `PASTE_YOUR_CIVITAI_TOKEN_HERE` with your token → **Commit changes…** → **Commit changes** again.
+
+## Create the endpoint
+
+The «endpoint» is your generator on RunPod.
+
+1. RunPod → **Serverless** → **New Endpoint** → **Deploy from a GitHub repository**.
+2. Pick your copy. The first time, click **Edit connection** and let RunPod see it.
+3. Fill in the page from top to bottom. Some settings are folded away — the arrows show what to click open:
+
+| Setting | Value |
+|---|---|
+| **Endpoint name** | anything — your copy's name is fine |
+| **GPU configuration** | tick **16 GB** for SDXL, Pony, Illustrious, NoobAI and SD 1.5 · **24 GB** for Krea 2, FLUX.1, Chroma, Z-Image and bigger · more boxes = easier to get a GPU |
+| **Max workers** | `1` |
+| Click **Advanced settings** to open it: | |
+| → **Active workers** | `0` — nothing to pay while idle |
+| → **GPU count** | `1` |
+| → **Idle timeout** | `5` sec |
+| → **Enable FlashBoot** | switch on · **Standard** |
+| → **Enable execution timeout** | switch on · **Execution timeout** `600` sec |
+| → click **Container configuration** → **Container disk** | `20` GB for SDXL, Pony, Illustrious, NoobAI and SD 1.5 · `30` GB for A1111 workers · `40` GB for Krea 2, FLUX.1, Chroma, Z-Image and bigger |
+
+4. Leave the rest as it is → **Deploy** at the bottom.
+
+RunPod may warn «runpod.serverless.start() handler not found in your repo». You can ignore it — the worker starts its handler from the image it builds on.
+
+## Wait for the build
+
+RunPod now builds your generator — about 30 minutes. The endpoint's page shows its progress. You can make the API key meanwhile.
+
+If it fails, open the build log, copy the last lines and ask in [Discussions](https://github.com/cobaltpear/cobaltpear.github.io/discussions).
+
+## Make an API key
+
+1. RunPod → **Settings** → **API Keys** → **Create API Key**.
+2. Choose **All**.
+3. Copy the key now — RunPod shows it only once.
+
+One key does everything — making pictures and making endpoints — for every endpoint you add later.
+Cobalt Pear keeps it in your browser, so use a browser only you use. RunPod spends only the credit you added.
+
+## Connect Cobalt Pear
+
+1. [Open Cobalt Pear](https://cobaltpear.github.io/) → **Models** → paste the **worker's page address** (from [Copy the worker](#copy-the-worker)) under «Your own worker» → **Add**.
+2. Paste your **endpoint ID** next to the model — on RunPod it is the short code under the endpoint's name (like `ab12cd34ef56gh`), then go to **Chat**.
+3. Type what you want to see, press Enter. The first time it opens **Settings** — paste your RunPod API key there, then go back to **Chat**.
+
+The very first picture can take 10–15 minutes while RunPod starts the generator for the first time. After that it is seconds to a minute.
+
+Next: [add a LoRA](../loras/), or [pick another model](../models/).
+
+## When something is off
+
+| | |
+|---|---|
+| «Wrong RunPod key» | Check the key, and that it has All access. |
+| Waits a long time | Normal for the first picture, and after a long break. If it never starts, check the endpoint's page on RunPod. |
+| To stop paying entirely | Set Max workers to 0, or delete the endpoint. Idle endpoints with 0 active workers cost nothing. |
+| Anything else | [Ask in Discussions](https://github.com/cobaltpear/cobaltpear.github.io/discussions). |

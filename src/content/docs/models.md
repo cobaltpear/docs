@@ -52,7 +52,7 @@ Paste into **Your own worker**:
 
 Or choose a pack or ComfyUI workflow `.json` file.
 
-Then follow the [setup guide](https://cobaltpear.github.io/guide.html) to make the endpoint.
+Then follow [Set up](../setup/) to make the endpoint. Made your own worker? [Make a pack](../make-a-pack/) for it.
 
 ## Setting up your copy
 
@@ -64,7 +64,7 @@ After **Custom** or a Civitai link, the app lists the steps for that model. What
    - *Hugging Face, Gated models only:* press **Agree** on the model's page first, signed in. A **Read** token is enough, and one works for every model.
    - A Hugging Face model that isn't Gated needs no token: the step is **Add the model** instead.
 3. **Add your token / Add the model** — the link opens a new file, `civitai.env`, in your copy with the model filled in. Paste the token after `CIVITAI_TOKEN=` or `HF_TOKEN=`, then press **Commit changes** in the page and again in the box that opens. Type your GitHub name in the box above the steps first, so the link knows where your copy is.
-4. **Make the endpoint on RunPod** from your copy, with the GPU and disk the app shows ([where each setting is](https://cobaltpear.github.io/guide.html#endpoint)). Then paste the endpoint ID next to the model.
+4. **Make the endpoint on RunPod** from your copy, with the GPU and disk the app shows ([where each setting is](../setup/#create-the-endpoint)). Then paste the endpoint ID next to the model.
 
 | Family | GPU | Container disk | First build |
 |---|---|---|---|

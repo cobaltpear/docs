@@ -1,0 +1,32 @@
+---
+// A tick box on each step heading (the h2s with data-step below); the ticks are kept in this browser
+// under "guide-done", the same key the old guide.html used — the app and this manual share cobaltpear.github.io.
+---
+<style is:global>
+	.sl-markdown-content h2 .tick { width: 1.1rem; height: 1.1rem; margin: 0 0.5rem 0 0; vertical-align: -0.1rem; accent-color: var(--sl-color-accent); cursor: pointer; }
+	.sl-markdown-content .step-done { opacity: 0.55; }
+</style>
+<script>
+	const KEY = 'guide-done';
+	const heads = [...document.querySelectorAll('.sl-markdown-content h2')].filter((h) => !h.id.startsWith('when-'));
+	let done: boolean[] = [];
+	try { done = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch {}
+	// a step = its heading and everything up to the next h2
+	const part = (h: Element) => {
+		const top = h.closest('.sl-heading-wrapper') || h, out = [top];
+		for (let n = top.nextElementSibling; n && !n.matches('h2, .sl-heading-wrapper'); n = n.nextElementSibling) out.push(n);
+		return out;
+	};
+	const boxes = heads.map((h, i) => {
+		const c = document.createElement('input');
+		c.type = 'checkbox'; c.className = 'tick'; c.checked = !!done[i];
+		c.setAttribute('aria-label', 'Done: ' + h.textContent);
+		const show = () => part(h).forEach((e) => e.classList.toggle('step-done', c.checked));
+		c.addEventListener('change', () => {
+			show();
+			try { localStorage.setItem(KEY, JSON.stringify(boxes.map((b) => b.checked))); } catch {}
+		});
+		h.prepend(c); show();
+		return c;
+	});
+</script>
