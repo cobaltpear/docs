@@ -72,4 +72,4 @@ After **Custom** or a Civitai link, the app lists the steps for that model. What
 | SD 1.5 | 16 GB | 20 GB | about 10 minutes |
 | FLUX.1, Chroma, Z-Image | 24 GB | 40 GB | about 25 minutes |
 
-The first picture after the build can take up to 10 minutes more while the worker starts. After that, a worker that has been idle starts again in a minute or two.
+The first picture after the build can take a few minutes more (up to about 12) while the worker starts. After that, a worker that has been idle starts again in a minute or two.
