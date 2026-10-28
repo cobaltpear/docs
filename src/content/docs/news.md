@@ -4,6 +4,10 @@ description: What changed in Cobalt Pear, newest first.
 ---
 
 <!-- newest first -->
+## 2026-10-28
+
+- News moved to the manual — the News link at the top opens it.
+
 ## 2026-10-27
 
 - Settings: Backup — save your models, endpoint IDs, LoRAs and settings to a file and load them back after clearing site data or in another browser (keys and tokens are left out).
