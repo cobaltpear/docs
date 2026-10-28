@@ -8,7 +8,7 @@ Cobalt Pear is an API UI — a one-page app for RunPod Serverless. Pick a model,
 
 - Just type — no GPU, no ComfyUI, no install.
 - Your own RunPod: your own GPU, your own rules — you pay only for the pictures you make.
-- Your key and pictures stay in your browser. There is no Cobalt Pear server.
+- Your key and pictures stay in your browser. Only *Make it for me*, if you tick it, passes your key through our small relay, which keeps nothing.
 
 [Open the app](https://cobaltpear.github.io/) · [Questions & ideas](https://github.com/cobaltpear/cobaltpear.github.io/discussions)
 
