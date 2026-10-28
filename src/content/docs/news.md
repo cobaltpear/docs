@@ -6,6 +6,7 @@ description: What changed in Cobalt Pear, newest first.
 <!-- newest first -->
 ## 2026-10-28
 
+- About is back in the menu
 - A Pricing page in the menu — Cobalt Pear is free to use; you pay RunPod only for GPU time.
 - The setup steps, About and the pack fields moved to the manual, with a new Cost and speed page. Make it names the models it makes and shows which one it's on; Make it, by hand and the Civitai token each sit in a box of their own. LoRAs built in: one block for all your models, with a Copy button for each line.
 - News moved to the manual — the News link at the top opens it.
