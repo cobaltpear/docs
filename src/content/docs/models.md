@@ -53,3 +53,23 @@ Paste into **Your own worker**:
 Or choose a pack or ComfyUI workflow `.json` file.
 
 Then follow the [setup guide](https://cobaltpear.github.io/guide.html) to make the endpoint.
+
+## Setting up your copy
+
+After **Custom** or a Civitai link, the app lists the steps for that model. What each one is for:
+
+1. **Make your copy** — a private copy of the worker on your GitHub, so RunPod can build it for you.
+2. **Make a token** — the worker downloads the model with it.
+   - *Civitai:* Civitai shows a token only once, so keep it somewhere. One token works for every model — next time reuse it and skip this step.
+   - *Hugging Face, Gated models only:* press **Agree** on the model's page first, signed in. A **Read** token is enough, and one works for every model.
+   - A Hugging Face model that isn't Gated needs no token: the step is **Add the model** instead.
+3. **Add your token / Add the model** — the link opens a new file, `civitai.env`, in your copy with the model filled in. Paste the token after `CIVITAI_TOKEN=` or `HF_TOKEN=`, then press **Commit changes** in the page and again in the box that opens. Type your GitHub name in the box above the steps first, so the link knows where your copy is.
+4. **Make the endpoint on RunPod** from your copy, with the GPU and disk the app shows ([where each setting is](https://cobaltpear.github.io/guide.html#endpoint)). Then paste the endpoint ID next to the model.
+
+| Family | GPU | Container disk | First build |
+|---|---|---|---|
+| SDXL, Pony, Illustrious, NoobAI | 16 GB | 20 GB | about 15 minutes |
+| SD 1.5 | 16 GB | 20 GB | about 10 minutes |
+| FLUX.1, Chroma, Z-Image | 24 GB | 40 GB | about 25 minutes |
+
+The first picture after the build can take up to 10 minutes more while the worker starts. After that, a worker that has been idle starts again in a minute or two.

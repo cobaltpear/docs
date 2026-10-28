@@ -27,6 +27,8 @@ When you press **+ LoRA** on a model, you choose one of two ways.
 
 Until the new build is ready, pictures come out without the new LoRAs and say so.
 
+A Civitai LoRA on a worker for a Hugging Face model needs your Civitai token: add a line `CIVITAI_TOKEN=` with it to `civitai.env` in your copy.
+
 For each picture you pick which built-in LoRAs to use from the **LoRA** button next to **Send**.
 
 :::caution[Keep the list short]
