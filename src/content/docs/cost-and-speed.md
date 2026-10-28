@@ -1,9 +1,9 @@
 ---
-title: Cost and speed
+title: Price, cost and speed
 description: What a picture costs on RunPod and how long it takes — measured numbers, and what makes them go up or down.
 ---
 
-Cobalt Pear is free. You pay RunPod for the GPU, by the second, only while a worker is running.
+**Cobalt Pear is free** — nothing to pay us. You pay RunPod for the GPU, by the second, only while a worker is running.
 When no picture is being made, the worker turns off and the GPU costs nothing.
 
 ## Measured

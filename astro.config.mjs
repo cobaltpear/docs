@@ -13,7 +13,8 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/cobaltpear' }],
 			sidebar: [
 				{ label: 'Set up', slug: 'setup' },
-				{ label: 'Using Cobalt Pear', items: [{ label: 'Choosing a model', slug: 'models' }, { label: 'LoRAs', slug: 'loras' }, { label: 'Make a pack', slug: 'make-a-pack' }, { label: 'Cost and speed', slug: 'cost-and-speed' }] },
+				{ label: 'Price: free', slug: 'cost-and-speed' },
+				{ label: 'Using Cobalt Pear', items: [{ label: 'Choosing a model', slug: 'models' }, { label: 'LoRAs', slug: 'loras' }, { label: 'Make a pack', slug: 'make-a-pack' }] },
 				// what changed, newest first — tools/bump.sh in comfyui-serverless adds a line each release
 				{ label: 'News', slug: 'news' },
 			],
