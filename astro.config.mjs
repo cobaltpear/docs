@@ -13,6 +13,8 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/cobaltpear' }],
 			sidebar: [
 				{ label: 'Using Cobalt Pear', items: [{ label: 'Choosing a model', slug: 'models' }, { label: 'LoRAs', slug: 'loras' }] },
+				// what changed, newest first — tools/bump.sh in comfyui-serverless adds a line each release
+				{ label: 'News', slug: 'news' },
 			],
 		}),
 	],

@@ -10,3 +10,4 @@ This manual explains what the buttons do and which choice fits you.
 
 - [Choosing a model](models/) — *Add*, *Custom*, or your own worker
 - [LoRAs](loras/) — adding LoRAs, and choosing between *Built into the worker* and *By link*
+- [News](news/) — what changed, newest first
