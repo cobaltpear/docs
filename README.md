@@ -9,3 +9,7 @@ Each push to `main` publishes the site.
 npm install
 npm run dev     # preview at localhost:4321/docs
 ```
+
+## License
+
+The manual's text and pictures: CC BY 4.0 ([LICENSE](LICENSE)).
