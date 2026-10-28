@@ -18,4 +18,5 @@ This manual explains what the buttons do and which choice fits you.
 - [Choosing a model](models/) — *Add*, *Custom*, or your own worker
 - [LoRAs](loras/) — adding LoRAs, and choosing between *Built into the worker* and *By link*
 - [Make a pack](make-a-pack/) — let Cobalt Pear call a worker you made
+- [Cost and speed](cost-and-speed/) — what a picture costs and how long it takes, measured
 - [News](news/) — what changed, newest first
