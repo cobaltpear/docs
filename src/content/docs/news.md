@@ -6,6 +6,7 @@ description: What changed in Cobalt Pear, newest first.
 <!-- newest first -->
 ## 2026-10-29
 
+- Manual, Setup, News and Feedback moved from the top menu to the bottom of About.
 - Pick the picture's shape: landscape, square or portrait. Make it is gone, so nothing passes through a Cobalt Pear server and the app records nothing about you. Plus is now on the Pricing page.
 
 ## 2026-10-28
