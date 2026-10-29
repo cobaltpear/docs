@@ -6,6 +6,7 @@ description: What changed in Cobalt Pear, newest first.
 <!-- newest first -->
 ## 2026-10-29
 
+- Plus: \*\*Bulk requests\*\* — one prompt per line, «×3» for several of one; RunPod makes them in one batch, and they come in even if you close the page. [How it works](/docs/bulk-requests/)
 - Pricing: the launch price lasts until December 31, 2026, and Plus includes 12 months of updates or more from the day you buy.
 - Text is one size bigger.
 - Manual, Setup, News and Feedback moved from the top menu to the bottom of About.
