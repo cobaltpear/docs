@@ -14,6 +14,7 @@ export default defineConfig({
 			sidebar: [
 				{ label: 'Set up', slug: 'setup' },
 				{ label: 'Using Cobalt Pear', items: [{ label: 'Choosing a model', slug: 'models' }, { label: 'Workers', slug: 'workers' }, { label: 'LoRAs', slug: 'loras' }, { label: 'Make a pack', slug: 'make-a-pack' }, { label: 'Cost and speed', slug: 'cost-and-speed' }] },
+				{ label: 'Plus', items: [{ label: 'What Plus adds', slug: 'plus' }, { label: 'Bulk requests', slug: 'bulk-requests' }] },
 				// what changed, newest first — tools/bump.sh in comfyui-serverless adds a line each release
 				{ label: 'News', slug: 'news' },
 			],
