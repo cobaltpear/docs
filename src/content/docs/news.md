@@ -4,6 +4,10 @@ description: What changed in Cobalt Pear, newest first.
 ---
 
 <!-- newest first -->
+## 2026-10-29
+
+- Pick the picture's shape: landscape, square or portrait. Make it is gone, so nothing passes through a Cobalt Pear server and the app records nothing about you. Plus is now on the Pricing page.
+
 ## 2026-10-28
 
 - About is back in the menu
