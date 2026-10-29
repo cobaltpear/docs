@@ -34,6 +34,7 @@ For each picture you pick which built-in LoRAs to use from the **LoRA** button n
 :::caution[Keep the list short]
 Each LoRA makes the build longer and the worker bigger (the app shows how many GB they add).
 RunPod stops a build that runs over 30 minutes.
+Video models are big, so their build is already long — for them, use **By link**.
 :::
 
 ## By link
