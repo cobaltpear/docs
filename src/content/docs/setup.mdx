@@ -53,22 +53,15 @@ The «endpoint» is your generator on RunPod.
 
 1. RunPod → **Serverless** → **New Endpoint** → **Deploy from a GitHub repository**.
 2. Pick your copy. The first time, click **Edit connection** and let RunPod see it.
-3. Fill in the page from top to bottom. Some settings are folded away — the arrows show what to click open:
+3. Change only these. Leave everything else as it is — RunPod's defaults are right:
 
 | Setting | Value |
 |---|---|
-| **Endpoint name** | anything — your copy's name is fine |
 | **GPU configuration** | tick **16 GB** for SDXL, Pony, Illustrious, NoobAI and SD 1.5 · **24 GB** for Krea 2, FLUX.1, Chroma, Z-Image and bigger · more boxes = easier to get a GPU |
 | **Max workers** | `1` |
-| Click **Advanced settings** to open it: | |
-| → **Active workers** | `0` — nothing to pay while idle |
-| → **GPU count** | `1` |
-| → **Idle timeout** | `5` sec |
-| → **Enable FlashBoot** | switch on · **Standard** |
-| → **Enable execution timeout** | switch on · **Execution timeout** `600` sec |
-| → click **Container configuration** → **Container disk** | `20` GB for SDXL, Pony, Illustrious, NoobAI and SD 1.5 · `30` GB for A1111 workers · `40` GB for Krea 2, FLUX.1, Chroma, Z-Image and bigger |
+| **Advanced settings** → **Container configuration** → **Container disk** | `20` GB for SDXL, Pony, Illustrious, NoobAI and SD 1.5 · `30` GB for A1111 workers · `40` GB for Krea 2, FLUX.1, Chroma, Z-Image and bigger |
 
-4. Leave the rest as it is → **Deploy** at the bottom.
+4. Click **Deploy** at the bottom.
 
 RunPod may warn «runpod.serverless.start() handler not found in your repo». You can ignore it — the worker starts its handler from the image it builds on.
 
