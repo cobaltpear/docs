@@ -6,6 +6,7 @@ description: What changed in Cobalt Pear, newest first.
 <!-- newest first -->
 ## 2026-10-29
 
+- Pricing: the launch price lasts until December 31, 2026, and Plus includes 12 months of updates or more from the day you buy.
 - Text is one size bigger.
 - Manual, Setup, News and Feedback moved from the top menu to the bottom of About.
 - Pick the picture's shape: landscape, square or portrait. Make it is gone, so nothing passes through a Cobalt Pear server and the app records nothing about you. Plus is now on the Pricing page.
