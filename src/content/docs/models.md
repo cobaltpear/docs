@@ -9,7 +9,7 @@ Open **Models**. There are three ways to get a model, under **Add a model**.
 |---|---|---|---|
 | What runs it | RunPod's own worker | your copy of a Cobalt Pear worker | your copy of a Cobalt Pear worker, or any worker you made |
 | LoRAs | no | yes | yes (Cobalt Pear workers) |
-| Setup | fewest steps — or **Make it** does it for you | copy the worker on GitHub, then make the endpoint | copy the worker on GitHub, then make the endpoint |
+| Setup | fewest steps | copy the worker on GitHub, then make the endpoint | copy the worker on GitHub, then make the endpoint |
 | Works for | every model in the list | list models with a single-file checkpoint | Civitai links, worker repos, pack or workflow files |
 
 **In short:** just want pictures → **Add**. Want LoRAs on a list model → **Custom**. The model is on Civitai → paste its link under **Your own worker**.
@@ -25,11 +25,7 @@ Open **Models**. There are three ways to get a model, under **Add a model**.
 
 ## Add
 
-Press **Add**, then either:
-
-- tick **Let Cobalt Pear make it on RunPod** and press **Make it** — the endpoint is made for you.
-  Your RunPod key passes through a small relay ([its code](https://github.com/cobaltpear/relay/blob/main/worker.js)), which keeps nothing about you — only how many times each model was made.
-- or do the RunPod steps the app shows, then paste the endpoint ID.
+Press **Add**, do the RunPod steps the app shows, then paste the endpoint ID.
 
 Models added this way take a prompt, size and seed. They show **No LoRA on this worker**.
 
