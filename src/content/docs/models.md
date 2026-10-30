@@ -41,7 +41,7 @@ Models stored only as diffusers folders can't go on a worker copy — use **Add*
 
 Paste into **Your own worker**:
 
-- **A Civitai model link** — an SDXL, Pony, Illustrious, NoobAI, FLUX.1, Chroma, Z-Image or SD 1.5 checkpoint.
+- **A Civitai model link** — an SDXL, Pony, Illustrious, NoobAI, FLUX.1, Chroma, Z-Image or SD 1.5 checkpoint, or a MiniMax H3 model (video with sound from your picture).
   Copy it from the address bar on the model's page. Click a version there first to get the `?modelVersionId=…` part; without it you get the newest version.
   The settings come from Civitai, and you get a ready worker to copy.
 - **A worker repo URL** — a worker with a `pack.json`.
@@ -69,5 +69,6 @@ After **Custom** or a Civitai link, the app lists the steps for that model. What
 | SDXL, Pony, Illustrious, NoobAI | 16 GB | 20 GB | about 15 minutes |
 | SD 1.5 | 16 GB | 20 GB | about 10 minutes |
 | FLUX.1, Chroma, Z-Image | 24 GB | 40 GB | about 25 minutes |
+| MiniMax H3 | 48 GB | 80 GB | close to RunPod's 30-minute limit — if it stops with a time-out, build again |
 
-The first picture after the build can take a few minutes more (up to about 12) while the worker starts. After that, a worker that has been idle starts again in a minute or two.
+The first picture after the build can take a few minutes more (up to about 12) while the worker starts. After that, a worker that has been idle starts again in a minute or two. A MiniMax H3 worker is much bigger, so its first start can take a long time — the [worker's page](https://github.com/cobaltpear/civitai-minimax-h3) says what to look at while it shows **Initializing**.
