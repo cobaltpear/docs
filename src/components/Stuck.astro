@@ -1,0 +1,37 @@
+---
+// A «Stuck here?» button at the end of each step (the same h2s Ticks.astro uses). Pressing it sends only
+// this page's and step's name, plus the note if one is typed, to cobaltpear-stuck (stuck/worker.js in comfyui-serverless)
+// — so we can see which step people give up at and fix that step's text first.
+---
+<style is:global>
+	.sl-markdown-content .stuck { margin-top: 0.75rem; font-size: var(--sl-text-sm); }
+	.sl-markdown-content .stuck > button { background: none; border: 1px solid var(--sl-color-gray-5); border-radius: 0.4rem; color: var(--sl-color-gray-2); padding: 0.15rem 0.6rem; cursor: pointer; font: inherit; }
+	.sl-markdown-content .stuck form { margin-top: 0.5rem; display: grid; gap: 0.5rem; max-width: 34rem; }
+	.sl-markdown-content .stuck textarea { width: 100%; min-height: 4.5rem; font: inherit; padding: 0.4rem; border-radius: 0.4rem; border: 1px solid var(--sl-color-gray-5); background: var(--sl-color-black); color: var(--sl-color-white); }
+	.sl-markdown-content .stuck form button { justify-self: start; background: var(--sl-color-accent); color: var(--sl-color-black); border: 0; border-radius: 0.4rem; padding: 0.3rem 0.9rem; cursor: pointer; font: inherit; }
+</style>
+<script>
+	const URL_ = 'https://cobaltpear-stuck.cobaltpear.workers.dev/stuck';
+	const page = location.pathname.replace(/\/$/, '').split('/').pop() || 'index';
+	const heads = [...document.querySelectorAll('.sl-markdown-content h2')].filter((h) => !h.id.startsWith('when-'));
+	heads.forEach((h) => {
+		const top = h.closest('.sl-heading-wrapper') || h;
+		let last: Element = top;
+		for (let n = top.nextElementSibling; n && !n.matches('h2, .sl-heading-wrapper'); n = n.nextElementSibling) last = n;
+		const box = document.createElement('div');
+		box.className = 'stuck';
+		box.innerHTML = `<button type="button">Stuck here?</button><form hidden><label>What happened? (optional)<textarea maxlength="500" placeholder="e.g. I don't see the Deploy button"></textarea></label><small>This sends only this step's name and what you type — nothing about you.</small><button type="submit">Send</button></form>`;
+		const open = box.querySelector(':scope > button') as HTMLButtonElement, form = box.querySelector('form') as HTMLFormElement;
+		open.addEventListener('click', () => { form.hidden = !form.hidden; });
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const note = (form.querySelector('textarea') as HTMLTextAreaElement).value;
+			let ok = false;
+			try { ok = (await fetch(URL_, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ site: 'cobaltpear', page, step: h.id, note }) })).ok; } catch {}
+			box.innerHTML = ok
+				? '<p>Thanks — we look at the steps people get stuck on and make them clearer. Need an answer? Ask in <a href="https://github.com/cobaltpear/cobaltpear.github.io/discussions">Discussions</a>.</p>'
+				: '<p>That didn\'t go through. You can ask in <a href="https://github.com/cobaltpear/cobaltpear.github.io/discussions">Discussions</a>.</p>';
+		});
+		last.after(box);
+	});
+</script>
