@@ -6,6 +6,7 @@ description: What changed in Cobalt Pear, newest first.
 <!-- newest first -->
 ## 2026-10-30
 
+- Continue: make the next scene from where a MiniMax H3 video ends
 - MiniMax H3: Sparse on/off switch — fast sparse attention, on by itself when the Civitai model says so
 - A MiniMax H3 model from Civitai: paste its link in «Your own worker» for video with sound from your picture (MiniMax H3 Universal).
 - The «Any Civitai» workers are now called Universal (SD 1.5, SDXL, FLUX.1, Chroma, Z-Image) — same repos, same links. Set up: a «Stuck here?» button on each step.
