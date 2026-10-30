@@ -4,6 +4,10 @@ description: What changed in Cobalt Pear, newest first.
 ---
 
 <!-- newest first -->
+## 2026-10-30
+
+- The «Any Civitai» workers are now called Universal (SD 1.5, SDXL, FLUX.1, Chroma, Z-Image) — same repos, same links. Set up: a «Stuck here?» button on each step.
+
 ## 2026-10-29
 
 - Plus: \*\*Bulk requests\*\* — one prompt per line, «×3» for several of one; RunPod makes them in one batch, and they come in even if you close the page. [How it works](/docs/bulk-requests/)
