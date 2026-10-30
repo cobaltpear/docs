@@ -31,7 +31,7 @@ Models added this way take a prompt, size and seed. They show **No LoRA on this 
 
 ## Custom
 
-**Custom** runs a list model on your own copy of the *Any Civitai model* worker for its family (SDXL, FLUX.1 or Z-Image), so LoRAs work there.
+**Custom** runs a list model on your own copy of the *Universal* worker for its family (SDXL, FLUX.1 or Z-Image), so LoRAs work there.
 It counts as your own worker.
 
 The button shows only on models that have a **single-file checkpoint** on Hugging Face.
