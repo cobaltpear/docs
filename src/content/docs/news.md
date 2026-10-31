@@ -4,6 +4,10 @@ description: What changed in Cobalt Pear, newest first.
 ---
 
 <!-- newest first -->
+## 2026-10-31
+
+- Continue: videos join without a flash or a color jump, each part is about 5 seconds, and Wan and other picture-to-video models continue from the last frame
+
 ## 2026-10-30
 
 - Continue: make the next scene from where a MiniMax H3 video ends
