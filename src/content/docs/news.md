@@ -4,6 +4,10 @@ description: What changed in Cobalt Pear, newest first.
 ---
 
 <!-- newest first -->
+## 2026-11-07
+
+- Models: «＋ Your own worker» is now the last tab, set apart. Paste a Hugging Face model link there (SDXL, FLUX.1, Z-Image) to run it on your own Universal worker with LoRAs — this replaces the Custom button on list models.
+
 ## 2026-10-31
 
 - Continue: videos join without a flash or a color jump, each part is about 5 seconds, and Wan and other picture-to-video models continue from the last frame

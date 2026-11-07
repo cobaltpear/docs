@@ -14,7 +14,7 @@ It finds the prompt, seed and size by itself where it can; change any that are w
 ## Put it in your repo and try it
 
 1. Save it as `pack.json` at the top of your worker's GitHub repo, on the `main` branch.
-2. [Open Cobalt Pear](https://cobaltpear.github.io/) → **Models** → **Custom** → paste the repo's address under «Your own worker» → **Add**. No repo? **Choose a pack or ComfyUI workflow** takes the file itself.
+2. [Open Cobalt Pear](https://cobaltpear.github.io/) → **Models** → **＋ Your own worker** → paste the repo's address → **Add**. No repo? **Choose a pack or ComfyUI workflow** takes the file itself.
 3. Paste your endpoint ID and send a prompt. The app reads the pack again each time it opens, so a fix shows at once.
 
 ## Let people find it

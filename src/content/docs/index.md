@@ -15,7 +15,7 @@ Cobalt Pear is an API UI — a one-page app for RunPod Serverless. Pick a model,
 This manual explains what the buttons do and which choice fits you.
 
 - [Set up](setup/) — your own image generator on RunPod, step by step
-- [Choosing a model](models/) — *Add*, *Custom*, or your own worker
+- [Choosing a model](models/) — *Add* or your own worker
 - [LoRAs](loras/) — adding LoRAs, and choosing between *Built into the worker* and *By link*
 - [Make a pack](make-a-pack/) — let Cobalt Pear call a worker you made
 - [Cost and speed](cost-and-speed/) — what a picture costs and how long it takes, measured

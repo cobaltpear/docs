@@ -57,4 +57,4 @@ By default one picture takes up to 4 linked LoRAs. To allow 8:
 ## When a model shows "No LoRA on this worker"
 
 That model runs on RunPod's own worker, which takes only a prompt, size and seed.
-LoRAs need one of the Cobalt Pear worker repos (ComfyUI or A1111), or **Custom** on a list model.
+LoRAs need one of the Cobalt Pear worker repos (ComfyUI or A1111), or a list model's Hugging Face link pasted under **Your own worker**.
