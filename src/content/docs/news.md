@@ -4,6 +4,10 @@ description: What changed in Cobalt Pear, newest first.
 ---
 
 <!-- newest first -->
+## 2026-11-08
+
+- Anima: paste any Anima model's Civitai or Hugging Face link in «Your own worker» (Anima Universal). Continue is now for MiniMax H3 videos only.
+
 ## 2026-11-07
 
 - Models: «＋ Your own worker» is now the last tab, set apart. Paste a Hugging Face model link there (SDXL, FLUX.1, Z-Image) to run it on your own Universal worker with LoRAs — this replaces the Custom button on list models.
