@@ -4,6 +4,11 @@ description: What changed in Cobalt Pear, newest first.
 ---
 
 <!-- newest first -->
+## 2026-11-09
+
+- New Universal workers, one per model family: Illustrious, NoobAI (eps and v-pred), Pony, Krea 2, Krea 2 Turbo and MOSS Image. Paste a model's Civitai link in «Your own worker» and Cobalt Pear picks the right one.
+- SDXL Universal now takes SDXL 1.0 checkpoints (and Lightning, Turbo, Hyper). A Pony, Illustrious or NoobAI copy of it stops at the next build with a message naming the new repo: make a copy of that one instead.
+
 ## 2026-11-08
 
 - Anima: paste any Anima model's Civitai or Hugging Face link in «Your own worker» (Anima Universal). Continue is now for MiniMax H3 videos only.
